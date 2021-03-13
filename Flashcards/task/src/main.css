@@ -1,0 +1,55 @@
+.container {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 150px 150px 150px;
+    grid-template-rows: 150px 150px 150px;
+    justify-content: center;
+}
+
+.cardholder {
+    perspective: 1000px;
+}
+
+.cardholder .card:hover {
+    transform: rotateY(180deg);
+}
+
+.card {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    transition: all 0.5s linear;
+    transform-style: preserve-3d;
+}
+
+.front, .back {
+    height: 100%;
+    width: 100%;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    position: absolute;
+}
+.front {
+    background-color: aqua;
+    z-index: 2;
+    backface-visibility: hidden;
+}
+.back {
+    background: whitesmoke;
+    z-index: 1;
+    transform: rotateY(180deg);
+}
+
+h1 {
+    text-align: center;
+    color: white;
+}
+
+body {
+    font-family: Arial;
+    background-image: url("https://i.redd.it/y69ercliqi551.png");
+}
+
